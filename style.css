@@ -166,3 +166,11 @@ footer .socials a {
 footer .socials a:hover {
   color: var(--accent);
 }
+
+nav {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
