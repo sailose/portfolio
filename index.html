@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Samuel Young | Portfolio</title>
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -21,16 +21,16 @@
     <h2>Projects</h2>
 
     <div class="project">
-      <h3>Featured Project: Business Website</h3>
-      <p>This is a website I built for a local business to showcase my skills in HTML and website deployment.</p>
-      <a href="https://fastfiredefense.com/" target="_blank" rel="noopener noreferrer">View Site</a>
+      <h3>Live Website</h3>
+      <p>This is a real website I built and launched. It shows my skills in HTML, layout, and getting a site online.</p>
+      <a href="https://fastfiredefense.com/" target="_blank">View Site</a>
     </div>
 
     <div class="project">
       <h3>To-Do List App</h3>
       <p>An interactive app built with JavaScript. Users can add and delete tasks. Includes animations and local storage.</p>
       <div id="todo-app">
-        <input type="text" id="task-input" placeholder="Enter a task..." />
+        <input type="text" id="task-input" placeholder="Enter a task...">
         <button onclick="addTask()">Add Task</button>
         <ul id="task-list"></ul>
       </div>
@@ -40,7 +40,7 @@
       <h3>Weather App</h3>
       <p>Fetches real-time weather data using the OpenWeatherMap API. Enter a city to see current conditions.</p>
       <div id="weather-app">
-        <input type="text" id="city-input" placeholder="Enter city name..." />
+        <input type="text" id="city-input" placeholder="Enter city name...">
         <button id="get-weather">Get Weather</button>
         <div id="weather-result"></div>
       </div>
@@ -49,17 +49,13 @@
 
   <section id="about">
     <h2>About Me</h2>
-    <p>
-      I’m a self-taught web developer based in Maryland, currently building up my skills
-      through real-world projects. I'm looking to get into an entry-level IT or tech role
-      to grow my career.
-    </p>
+    <p>I’m a self-taught web developer based in Maryland, currently building up my skills through real-world projects. I'm looking to get into an entry-level IT or tech role to grow my career.</p>
   </section>
 
   <section id="contact">
     <h2>Contact</h2>
     <p>Email: <a href="mailto:sailose15@gmail.com">sailose15@gmail.com</a></p>
-    <p>GitHub: <a href="https://github.com/sailose" target="_blank" rel="noopener noreferrer">github.com/sailose</a></p>
+    <p>GitHub: <a href="https://github.com/sailose" target="_blank">github.com/sailose</a></p>
   </section>
 
   <footer>
@@ -86,9 +82,7 @@
 
       try {
         const apiKey = '058d9391d8ce559aa698a56bab0115b1';
-        const response = await fetch(
-          `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`
-        );
+        const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`);
         const data = await response.json();
 
         if (data.cod !== 200) {
@@ -97,8 +91,7 @@
           resultDiv.innerHTML = `
             <p><strong>${data.name}, ${data.sys.country}</strong></p>
             <p>Temperature: ${data.main.temp} °F</p>
-            <p>Weather: ${data.weather[0].description}</p>
-          `;
+            <p>Weather: ${data.weather[0].description}</p>`;
         }
       } catch (err) {
         resultDiv.innerHTML = `<p>Something went wrong. Try again later.</p>`;

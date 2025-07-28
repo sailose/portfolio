@@ -1,93 +1,129 @@
-body {
-  font-family: Arial, sans-serif;
+:root {
+  --bg: #ffffff;
+  --text: #111111;
+  --accent: #1a73e8;
+}
+
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  background: #f4f4f4;
 }
-header,
-footer {
-  background: #333;
-  color: #fff;
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+header {
+  padding: 4rem 2rem 2rem;
   text-align: center;
-  padding: 1em 0;
+  background-color: var(--bg);
 }
+
+header h1 {
+  font-size: 2.5rem;
+}
+
+header p {
+  color: #555;
+  margin-top: 0.5rem;
+}
+
+nav {
+  margin-top: 1.5rem;
+}
+
 nav a {
-  margin: 0 10px;
-  color: #fff;
+  margin: 0 1rem;
   text-decoration: none;
+  color: var(--accent);
+  font-weight: bold;
 }
+
 section {
-  padding: 2em;
-  max-width: 800px;
+  padding: 3rem 2rem;
+  max-width: 900px;
   margin: auto;
 }
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: var(--accent);
+}
+
 .project {
-  background: #fff;
-  margin-bottom: 1.5em;
-  padding: 1em;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+  margin-bottom: 3rem;
 }
-.project:hover {
-  transform: scale(1.02);
+
+.project h3 {
+  font-size: 1.4rem;
+  color: var(--text);
 }
+
+.project p {
+  margin: 0.5rem 0 1rem;
+}
+
+.project a {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  background-color: #f9f9f9;
+  color: #666;
+  font-size: 0.9rem;
+}
+
 #todo-app,
 #weather-app {
-  background: #fff;
-  padding: 1em;
+  background-color: #f5f5f5;
+  padding: 1rem;
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  margin-top: 1em;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  margin-top: 1rem;
 }
-#todo-app input[type='text'],
-#city-input {
+
+input[type="text"] {
+  padding: 0.5rem;
   width: 70%;
-  padding: 0.5em;
-  font-size: 1em;
+  margin-right: 0.5rem;
 }
-#todo-app button,
-#get-weather {
-  padding: 0.5em 1em;
-  font-size: 1em;
-  background: #333;
-  color: white;
+
+button {
+  padding: 0.5rem 1rem;
+  background-color: var(--accent);
+  color: #fff;
   border: none;
   cursor: pointer;
-  transition: background 0.3s ease;
 }
-#todo-app button:hover,
-#get-weather:hover {
-  background: #555;
+
+button:hover {
+  background-color: #1558c0;
 }
+
 ul#task-list {
+  margin-top: 1rem;
   list-style: none;
-  padding: 0;
-  margin-top: 1em;
 }
+
 ul#task-list li {
-  background: #eee;
-  margin-bottom: 0.5em;
-  padding: 0.5em;
-  border-radius: 4px;
+  padding: 0.5rem;
+  background-color: #eaeaea;
+  margin-bottom: 0.5rem;
   display: flex;
   justify-content: space-between;
-  animation: fadeIn 0.5s ease-in-out;
 }
+
 #weather-result {
-  margin-top: 1em;
-  background: #eee;
-  padding: 0.5em;
+  margin-top: 1rem;
+  background-color: #eaeaea;
+  padding: 0.75rem;
   border-radius: 4px;
-  animation: fadeIn 0.5s ease-in-out;
-}
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
