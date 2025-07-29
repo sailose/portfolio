@@ -3,185 +3,44 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Samuel Young, self-taught web developer portfolio showcasing projects and skills." />
+  <meta name="keywords" content="web developer, portfolio, Samuel Young, software engineer" />
   <title>Samuel Young | Portfolio</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <style>
-    :root {
-      --bg: #000;
-      --text: #fff;
-      --card: #111;
-      --gray: #ccc;
-      --accent: #1e90ff;
-    }
-
-    body.light-mode {
-      --bg: #fff;
-      --text: #000;
-      --card: #eee;
-      --gray: #333;
-      --accent: #1e90ff;
-    }
-
-    body {
-      background-color: var(--bg);
-      color: var(--text);
-      font-family: 'Inter', sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-
-    .typed-text {
-      display: inline;
-      border-right: 2px solid var(--text);
-      white-space: nowrap;
-      overflow: hidden;
-      width: 0;
-      animation: blink 0.7s step-end infinite;
-    }
-
-    @keyframes typing {
-      from { width: 0; }
-      to { width: 100%; }
-    }
-
-    @keyframes blink {
-      50% { border-color: transparent; }
-    }
-
-    footer {
-      background-color: var(--card);
-      color: var(--gray);
-      text-align: center;
-      padding: 2rem 1rem;
-      font-size: 0.9rem;
-      margin-top: 4rem;
-    }
-
-    footer .socials {
-      margin-bottom: 1rem;
-    }
-
-    footer .socials a {
-      color: var(--gray);
-      margin: 0 0.5rem;
-      font-size: 1.5rem;
-      transition: color 0.3s ease;
-    }
-
-    footer .socials a:hover {
-      color: var(--accent);
-    }
-
-    .theme-toggle {
-  background: var(--card);
-  color: var(--text);
-  border: none;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  border-radius: 4px;
-  transition: background 0.3s ease, color 0.3s ease;
-  font-size: 1rem;
-}
-
-    .theme-toggle:hover {
-      background: var(--accent);
-      color: #fff;
-    }
-      .skills {
-      padding: 2rem;
-      background: var(--card);
-    }
-    .skills-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      list-style: none;
-      padding: 0;
-    }
-    .skills-list li {
-      background: var(--accent);
-      color: #fff;
-      padding: 0.5rem 1rem;
-      border-radius: 5px;
-    }
-    .contact-form {
-      padding: 2rem;
-      background: var(--card);
-    }
-    .contact-form form {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      max-width: 600px;
-      margin: 0 auto;
-    }
-    .contact-form input,
-    .contact-form textarea {
-      padding: 0.75rem;
-      border: none;
-      border-radius: 5px;
-      font-size: 1rem;
-    }
-    .contact-form button {
-      padding: 0.75rem;
-      background: var(--accent);
-      border: none;
-      color: #fff;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 1rem;
-      transition: background 0.3s ease;
-    }
-    .contact-form button:hover {
-      background: #0077cc;
-    }
-    @media (max-width: 768px) {
-      header h1, header p {
-        text-align: center;
-      }
-      nav ul {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-    }
-
-</style>
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
 </head>
 <body>
-  
-
   <nav>
-    <div class="logo">👨‍💻</div>
-    <ul>
-      <li><a href="#home" class="active">Home</a></li>
+    <div class="logo" aria-label="Samuel Young's Logo">👨‍💻</div>
+    <button class="menu-toggle" aria-label="Toggle navigation menu">☰</button>
+    <ul class="nav-menu">
+      <li><a href="#home">Home</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#projects">Projects</a></li>
-      <li><a href="#resume">Resume</a></li>
+      <li><a href="resume.pdf" download aria-label="Download Samuel Young's Resume">Resume</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
 
-  <section style="text-align: right; padding: 1rem;">
-  <button class="theme-toggle" onclick="toggleTheme()">
-  <i id="theme-icon" class="fas fa-sun"></i>
-</button>
-</section>
+  <section class="theme-switch">
+    <button class="theme-toggle" aria-label="Toggle between light and dark mode" onclick="toggleTheme()">
+      <i id="theme-icon" class="fas fa-sun"></i>
+    </button>
+  </section>
 
   <header id="home">
     <h1><span class="typed-text" id="typed-text"></span></h1>
     <p>your average tech enthusiast, documenting the journey of becoming a software engineer.</p>
   </header>
 
-  <!-- <section class="featured">
-    <h2>Featured Project</h2>
-    <div class="video-box">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/TODO" title="YouTube video" frameborder="0" allowfullscreen></iframe>
-    </div>
-  </section> -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I’m a self-taught web developer based in Maryland. I’m passionate about learning new technologies and am actively building my skills by creating real-world projects. Looking for my first opportunity in tech.</p>
+  </section>
 
-  <section class="projects" id="projects">
+  <section id="projects">
     <h2>Projects</h2>
     <div class="project-card">
       <h3>Fast Fire Defense</h3>
@@ -189,80 +48,96 @@
       <a href="https://fastfiredefense.com/" target="_blank">Visit Site</a>
     </div>
     <div class="project-card">
-      <h3>To-Do App</h3>
-      <p>Simple JavaScript to-do list app with animations and task delete buttons.</p>
+      <h3>Interactive Quiz App</h3>
+      <p>A dynamic quiz app with a timer, progress tracking, and high score saving using local storage. Built with HTML, CSS, and JavaScript.</p>
+      <a href="https://sailose.github.io/quiz-app" target="_blank">Live Demo</a>
+      <a href="quiz-app.zip" download>Download Code</a>
     </div>
     <div class="project-card">
-      <h3>Weather App</h3>
-      <p>Uses the OpenWeatherMap API to get current conditions based on city name.</p>
+      <h3>Expense Tracker</h3>
+      <p>A web app for tracking expenses with categorization, editing, and a Chart.js visualization of spending. Built with HTML, CSS, JavaScript, and Chart.js.</p>
+      <a href="https://sailose.github.io/expense-tracker" target="_blank">Live Demo</a>
+      <a href="expense-tracker.zip" download>Download Code</a>
     </div>
   </section>
 
-  <section class="about" id="about">
-    <h2>About Me</h2>
-    <p>I’m a self-taught web developer based in Maryland. I’m passionate about learning new technologies and am actively building my skills by creating real-world projects. Looking for my first opportunity in tech.</p>
-  </section>
-
-  
-
-  <!-- Skills Section -->
-  <section class="skills" id="skills">
-    <h2>Skills</h2>
-    <ul class="skills-list">
-      <li>HTML5</li>
-      <li>CSS3</li>
-      <li>JavaScript</li>
-      <li>Git & GitHub</li>
-      <li>Responsive Design</li>
-    </ul>
-  </section>
-
-  <!-- Contact Form Section -->
-  <section class="contact-form" id="contact-form">
+  <section id="contact">
     <h2>Contact Me</h2>
     <form action="https://formspree.io/f/mnqepgrz" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <label for="name">Your Name</label>
+      <input type="text" id="name" name="name" placeholder="Your Name" required />
+      <label for="email">Your Email</label>
+      <input type="email" id="email" name="email" placeholder="Your Email" required />
+      <label for="message">Your Message</label>
+      <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
       <button type="submit">Send</button>
     </form>
   </section>
 
-  <footer id="contact">
+  <footer>
     <div class="socials">
-      <a href="mailto:sailose15@gmail.com"><i class="fas fa-envelope"></i></a>
-      <a href="https://github.com/sailose" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="mailto:sailose15@gmail.com" aria-label="Email Samuel Young"><i class="fas fa-envelope"></i></a>
+      <a href="https://github.com/sailose" target="_blank" aria-label="Samuel Young's GitHub"><i class="fab fa-github"></i></a>
     </div>
     <p>&copy; 2025 Samuel Young. All rights reserved.</p>
   </footer>
 
   <script>
-  function toggleTheme() {
-    const body = document.body;
-    const icon = document.getElementById('theme-icon');
-    body.classList.toggle('light-mode');
-    if (body.classList.contains('light-mode')) {
-      icon.classList.remove('fa-sun');
-      icon.classList.add('fa-moon');
-    } else {
-      icon.classList.remove('fa-moon');
-      icon.classList.add('fa-sun');
+    // Type animation
+    function typeText(text, elementId, speed) {
+      const el = document.getElementById(elementId);
+      let i = 0;
+      function type() {
+        if (i < text.length) {
+          el.textContent += text.charAt(i);
+          i++;
+          setTimeout(type, speed);
+        }
+      }
+      try {
+        type();
+      } catch (e) {
+        console.error('Typing animation error:', e);
+      }
     }
-  }
-function typeText(text, elementId, speed) {
-  const el = document.getElementById(elementId);
-  let i = 0;
-  function type() {
-    if (i < text.length) {
-      el.textContent += text.charAt(i);
-      i++;
-      setTimeout(type, speed);
-    }
-  }
-  type();
-}
+    typeText("hello, Samuel here", "typed-text", 120);
 
-typeText("hello, Samuel here", "typed-text", 100);
-</script>
+    // Theme toggle
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "light") {
+      document.body.classList.add("light-mode");
+      document.getElementById("theme-icon").classList.replace("fa-sun", "fa-moon");
+    }
+
+    function toggleTheme() {
+      const body = document.body;
+      const icon = document.getElementById('theme-icon');
+      const isLight = body.classList.toggle("light-mode");
+      icon.classList.replace(isLight ? 'fa-sun' : 'fa-moon', isLight ? 'fa-moon' : 'fa-sun');
+      try {
+        localStorage.setItem("theme", isLight ? "light" : "dark");
+      } catch (e) {
+        console.error('LocalStorage error:', e);
+      }
+    }
+
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const target = document.querySelector(link.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth' });
+        } else {
+          console.warn('Scroll target not found:', link.getAttribute('href'));
+        }
+      });
+    });
+
+    // Mobile menu toggle
+    document.querySelector('.menu-toggle').addEventListener('click', () => {
+      document.querySelector('.nav-menu').classList.toggle('active');
+    });
+  </script>
 </body>
 </html>

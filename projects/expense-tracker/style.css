@@ -1,0 +1,92 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 800px;
+  width: 90%;
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+#expense-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+#expense-form input,
+#expense-form select {
+  flex: 1;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#expense-form button {
+  padding: 0.8rem 1.5rem;
+  background: #1e90ff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#expense-form button:hover {
+  background: #0077cc;
+}
+
+#summary {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+#expense-list {
+  list-style: none;
+  padding: 0;
+}
+
+.expense-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem;
+  background: #e0e0e0;
+  border-radius: 5px;
+  margin-bottom: 0.5rem;
+}
+
+.expense-item button {
+  background: #ff4444;
+  color: white;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.expense-item button:hover {
+  background: #cc0000;
+}
+
+#expense-chart {
+  max-width: 100%;
+  margin-top: 1rem;
+}
